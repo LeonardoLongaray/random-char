@@ -1,10 +1,11 @@
-import random
 arquetipos_herois = ['Herói', 'Anti-herói', 'Escolhido', 'Rebelde', 'Mentor', 'Governante', 'Ingênuo', 'Aventureiro', 'Sobrevivente', 'Malandro']
 arquetipos_viloes = ['Tirano', 'Fanático', 'Manipulador', 'Monstro', 'O trágico', 'Cientista louco', 'Anti-vilão']
 ocupacao = ['Guerreiro', 'Estrategista', 'Investigador', 'Diplomata', 'Assassino', 'Especialista', 'Mercenario', 'Místico']
 origem = ['Nobre', 'Camponês', 'Soldado', 'Criminoso', 'Estudioso', 'Acólito', 'Orfão']
 objetivo = ['Vingança', 'Poder', 'Redenção', 'Conhecimento', 'Riqueza', 'Proteção', 'Liberdade', 'Legado']
 defeito_fatal = ['Orgulho', 'Ganância', 'Covardia', 'Obsessão', 'Ingenuidade', 'Impulsividade', 'Vício', 'Crueldade']
+
+import random
 
 heroi_ou_vilao = random.choice(['Herói', 'Vilão'])
 if heroi_ou_vilao == 'Herói':
