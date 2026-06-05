@@ -5,10 +5,23 @@ origem = ['Nobre', 'Camponês', 'Soldado', 'Criminoso', 'Estudioso', 'Acólito',
 objetivo = ['Vingança', 'Poder', 'Redenção', 'Conhecimento', 'Riqueza', 'Proteção', 'Liberdade', 'Legado']
 defeito_fatal = ['Orgulho', 'Ganância', 'Covardia', 'Obsessão', 'Ingenuidade', 'Impulsividade', 'Vício', 'Crueldade']
 
+pref_jogador = input('Você prefere jogar de herói ou vilão? ').replace('ó','o').replace('ã', 'a').upper().strip()
+idade_jogador = int(input('Qual sua idade? '))
+aleatorizar = input('Iniciar aleatório? (sim/não) ').lower()
+
 import random
 
-heroi_ou_vilao = random.choice(['Herói', 'Vilão'])
-if heroi_ou_vilao == 'Herói':
+if idade_jogador <17 and pref_jogador == "VILAO":
+  print('Você não tem idade pra jogar de vilão')
+  heroi_ou_vilao = 'HEROI'
+elif idade_jogador<17:
+  heroi_ou_vilao = 'HEROI'
+elif aleatorizar == 'sim':
+  heroi_ou_vilao = random.choice(['HEROI', 'VILAO'])
+else:
+  heroi_ou_vilao = pref_jogador
+
+if heroi_ou_vilao == 'HEROI':
   print('Você será um herói e suas características serão as seguintes: ')
   lista = {"Arquétipo": arquetipos_herois,
     "Ocupação": ocupacao,
